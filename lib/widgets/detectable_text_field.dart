@@ -75,11 +75,5 @@ class DetectableTextField extends TextField {
           !(detectedStyle != null && controller != null),
           'Cannot provide both a detectedStyle and a controller. Use a controller to define detectedStyle.\n Example: DetectableTextEditingController(detectedStyle : yourDetectedStyle)',
         ),
-        super(
-          controller: controller ??
-              DetectableTextEditingController(
-                regExp: regExp ?? detectionRegExp(),
-                detectedStyle: detectedStyle,
-              ),
-        );
+        super();
 }
